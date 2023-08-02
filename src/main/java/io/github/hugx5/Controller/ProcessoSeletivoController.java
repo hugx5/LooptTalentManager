@@ -5,6 +5,7 @@ import io.github.hugx5.entity.SelectiveProcess;
 import io.github.hugx5.repository.SelectiveProcessRepository;
 import io.github.hugx5.service.ProService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,17 +26,20 @@ public class ProcessoSeletivoController {
     }
 
     @GetMapping
+    @ResponseStatus(HttpStatus.OK)
     public List<SelectiveProcess> obterProcessosSeletivos() {
         return proService.listaSelectiveProcess();
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public SelectiveProcess cadastrarProcessoSeletivo(@RequestBody SelectiveProcess novoProcesso) {
         return proService.salvar(novoProcesso);
     }
 
     // Endpoint para obter candidatos de um processo seletivo pelo ID do processo
     @GetMapping("/{id}/candidatos")
+    @ResponseStatus(HttpStatus.OK)
     public List<Candidato> obterCandidatosPorProcessoSeletivo(@PathVariable UUID id) {
         return proService.buscarCandidatosPorIdDoProcesso(id);
     }
