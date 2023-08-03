@@ -1,6 +1,8 @@
 package io.github.hugx5.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import io.github.hugx5.utils.Status;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -16,15 +18,19 @@ import java.util.UUID;
 public class Candidato {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.AUTO) //Gera o id automaticamente
+    private UUID id; //UUID é um tipo de id que gera um id aleatório
     private String nome;
     private String foto;
-    private String status;
 
-    @ManyToOne
-    @JoinColumn(name = "id_Selectiveprocess") // Nome da coluna que representa o relacionamento na tabela candidato
-    private SelectiveProcess selectiveProcess;
+    @Enumerated(EnumType.STRING)
+    private Status status;
+
+
+    @JsonBackReference //Evita recursividade infinita
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL) //Muitos candidatos para um processo seletivo
+    @JoinColumn(name = "id_Selective_process") //Nome da coluna que vai ser criada na tabela candidato
+    private SelectiveProcess selectiveProcess; //Nome do atributo que vai ser criado na tabela candidato
 
 
 }

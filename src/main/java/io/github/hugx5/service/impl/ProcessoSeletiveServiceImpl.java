@@ -2,9 +2,10 @@ package io.github.hugx5.service.impl;
 
 import io.github.hugx5.entity.Candidato;
 import io.github.hugx5.entity.SelectiveProcess;
-import io.github.hugx5.repository.SelectiveProcessRepository;
 import io.github.hugx5.repository.CandidatoRepository;
-import io.github.hugx5.service.ProService;
+import io.github.hugx5.repository.SelectiveProcessRepository;
+import io.github.hugx5.service.ProcessoSeletiveService;
+import io.github.hugx5.utils.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,14 +15,14 @@ import java.util.UUID;
 
 
 @Service
-public class ProServiceImpl implements ProService {
+public class ProcessoSeletiveServiceImpl implements ProcessoSeletiveService {
 
     private final SelectiveProcessRepository selectiveProcessRepository;
     private final CandidatoRepository candidatoRepository;
 
     @Autowired
-    public ProServiceImpl(SelectiveProcessRepository selectiveProcessRepository,
-                          CandidatoRepository candidatoRepository) {
+    public ProcessoSeletiveServiceImpl(SelectiveProcessRepository selectiveProcessRepository,
+                                       CandidatoRepository candidatoRepository) {
         this.selectiveProcessRepository = selectiveProcessRepository;
         this.candidatoRepository = candidatoRepository;
     }
@@ -55,4 +56,15 @@ public class ProServiceImpl implements ProService {
         }
         return null;
     }
+    @Override
+    public void criarCandidato(UUID id, Candidato candidato) {
+        Optional<SelectiveProcess> selectiveProcessOptional = selectiveProcessRepository.findById(id);
+        if (selectiveProcessOptional.isPresent()) {
+            SelectiveProcess selectiveProcess = selectiveProcessOptional.get();
+            candidato.setStatus(Status.PENDENTE);
+            candidato.setSelectiveProcess(selectiveProcess);
+            candidatoRepository.save(candidato);
+        }
+    }
 }
+

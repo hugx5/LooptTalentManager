@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-public interface ProService {
+public interface ProcessoSeletiveService {
 
      SelectiveProcess salvar(SelectiveProcess selectiveProcess);
 
@@ -20,4 +20,5 @@ public interface ProService {
      List<Candidato> buscarCandidatosPorIdDoProcesso(UUID id);
 
 
+     void criarCandidato(UUID id, Candidato candidato);
 }
