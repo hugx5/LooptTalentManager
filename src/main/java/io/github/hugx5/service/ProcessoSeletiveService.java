@@ -23,4 +23,6 @@ public interface ProcessoSeletiveService {
     List<Candidato> buscarCandidatosPorProcessoSeletivo(UUID id, Integer quantidade);
 
     void atualizarStatusCandidato(UUID id, Status status);
+
+    List<Candidato> buscarTodosCandidatosPorProcessoSeletivo(UUID id);
 }

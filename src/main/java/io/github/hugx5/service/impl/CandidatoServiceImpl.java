@@ -20,4 +20,5 @@ public class CandidatoServiceImpl implements CandidatoService {
                 .orElseThrow(() -> new RuntimeException("Candidato não encontrado"));  //Se não encontrar, lança uma exceção
 
     }
+
 }

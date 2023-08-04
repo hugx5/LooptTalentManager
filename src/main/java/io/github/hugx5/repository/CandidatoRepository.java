@@ -12,5 +12,6 @@ import java.util.UUID;
 public interface CandidatoRepository extends JpaRepository<Candidato, UUID> {
 
     List<Candidato> findByStatusNotAndSelectiveProcessId(Status status, UUID id);
+    List<Candidato> findBySelectiveProcessId(UUID selectiveProcessId);
 
 }

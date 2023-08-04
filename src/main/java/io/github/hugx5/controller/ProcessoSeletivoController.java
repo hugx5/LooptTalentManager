@@ -58,4 +58,12 @@ public class ProcessoSeletivoController {
         return candidatoService.buscarCandidatoPorId(id);
     }
 
+    @GetMapping("/{id}/todosCandidatos")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Candidato> buscarTodosCandidatosPorProcessoSeletivo(@PathVariable("id") UUID id) {
+        return processoSeletiveService.buscarTodosCandidatosPorProcessoSeletivo(id);
+    }
+
 }
+
+
