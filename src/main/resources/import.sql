@@ -6,6 +6,8 @@ INSERT INTO SELECTIVE_PROCESS (ID, NOME) VALUES ('7fa70df2-fd63-4c5f-bd92-b436d5
 INSERT INTO SELECTIVE_PROCESS (ID, NOME) VALUES ('9232421b-eb41-4769-bac8-09980f59d34d', 'Banco de Talentos');
 
 -- FRONTEND
+INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('123e4567-e89b-12d3-a456-426655440000', 'PENDENTE', 'Ana Silva', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '627e0fa1-a747-4ec9-9a4f-131a2189a6e6');
+INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('987e6543-b21e-34d5-b876-567890123456', 'PENDENTE', 'Pedro Santos', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '627e0fa1-a747-4ec9-9a4f-131a2189a6e6');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('3c3f956d-8a68-48c7-9e10-3a0734ed84c9', 'PENDENTE', 'Marina Costa', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '627e0fa1-a747-4ec9-9a4f-131a2189a6e6');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('9de3d71a-0385-46c0-9c0e-e4c010961eab', 'PENDENTE', 'Gabriel Oliveira', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '627e0fa1-a747-4ec9-9a4f-131a2189a6e6');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('19d61f5e-87e2-4b99-9ae3-e74415b28ca7', 'PENDENTE', 'Carolina Rocha', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '627e0fa1-a747-4ec9-9a4f-131a2189a6e6');
@@ -14,7 +16,8 @@ INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('3a
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('95d9d497-48d6-4d2b-868a-18804a1471f8', 'PENDENTE', 'Rafael Lima', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '627e0fa1-a747-4ec9-9a4f-131a2189a6e6');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('234d5b54-6ab9-4f6b-8ad3-6c23450c97d8', 'PENDENTE', 'Beatriz Castro', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '627e0fa1-a747-4ec9-9a4f-131a2189a6e6');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('16b25b7d-2b96-46aa-a1a0-e03b888f7687', 'PENDENTE', 'Matheus Rodrigues', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '627e0fa1-a747-4ec9-9a4f-131a2189a6e6');
--- BACKEND,  'PENDENTE',
+
+-- BACKEND,
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('7d22ddbb-727b-42a6-8eb3-47ac0e6b2042', 'PENDENTE', 'Mariana Ribeiro', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '2d7cc5dc-9576-44a8-93c4-98aeebef43ef');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('8a9cdd8e-04d1-4c8f-9a5b-7ab7c784e90f', 'PENDENTE', 'Thiago Barbosa', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '2d7cc5dc-9576-44a8-93c4-98aeebef43ef');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('5d43bbfd-e3f2-4c4f-8a6f-97b63ad20c85', 'PENDENTE', 'Camila Pereira', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '2d7cc5dc-9576-44a8-93c4-98aeebef43ef');
@@ -25,7 +28,7 @@ INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('d7
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('8b1467d2-47d8-4bb1-a48d-3083e3afaebe', 'PENDENTE', 'André Alves', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '2d7cc5dc-9576-44a8-93c4-98aeebef43ef');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('c5c03e78-7f82-4be5-8ce0-60af9a8b5c0c', 'PENDENTE', 'Fernanda Rocha', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '2d7cc5dc-9576-44a8-93c4-98aeebef43ef');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('438b34d6-6e5d-43fc-a7f3-63e24d329c75', 'PENDENTE', 'Bruno Oliveira', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '2d7cc5dc-9576-44a8-93c4-98aeebef43ef');
--- FULLSTACK 'PENDENTE',
+-- FULLSTACK
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('f9ab84c8-10de-487e-baad-bbaeb4e18dc2', 'PENDENTE', 'Luiza Torres', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '9fa08a67-b34a-4c77-b223-8aac1cbc76aa');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('8ad349c0-0ff2-4720-88c2-4f7386b8eeb2', 'PENDENTE', 'Felipe Castro', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '9fa08a67-b34a-4c77-b223-8aac1cbc76aa');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('5cb0e8cd-d6b9-4b9f-80c3-8b9b98613d34', 'PENDENTE', 'Manuela Carvalho', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '9fa08a67-b34a-4c77-b223-8aac1cbc76aa');
@@ -36,7 +39,7 @@ INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('3b
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('2467acdf-8e4b-4df9-9a34-3c6d58adab3e', 'PENDENTE', 'Rafaela Costa', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '9fa08a67-b34a-4c77-b223-8aac1cbc76aa');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('e7d506bb-eb14-4a40-9043-2c67b7879a1e', 'PENDENTE', 'Lucas Rocha', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '9fa08a67-b34a-4c77-b223-8aac1cbc76aa');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('6c7df453-05b5-4861-8790-3a09a8f00db2', 'PENDENTE', 'Carolina Oliveira', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '9fa08a67-b34a-4c77-b223-8aac1cbc76aa');
--- DESIGNERFIGMA 'PENDENTE',
+-- DESIGNERFIGMA
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('f7b0d80e-1c3b-47a3-88ce-4e23b12d8f60', 'PENDENTE', 'Enzo Ferreira', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '7fa70df2-fd63-4c5f-bd92-b436d5f6ff3a');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('341e8bbf-8252-4287-97f5-37ebc5f82223', 'PENDENTE', 'Sophia Almeida', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '7fa70df2-fd63-4c5f-bd92-b436d5f6ff3a');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('f55f909c-2d6f-460a-b5e0-d870cb5c170f', 'PENDENTE', 'Miguel Pereira', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '7fa70df2-fd63-4c5f-bd92-b436d5f6ff3a');
@@ -46,7 +49,9 @@ INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('bb
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('bfdf3f58-33d5-45ab-9d13-dc98af0124b5', 'PENDENTE', 'Arthur Lima', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '7fa70df2-fd63-4c5f-bd92-b436d5f6ff3a');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('0d784704-9a06-4bbd-9ad6-4ed7f8eb8c1b', 'PENDENTE', 'Gabriela Castro', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '7fa70df2-fd63-4c5f-bd92-b436d5f6ff3a');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('44bb27b8-1e16-43c1-99a9-289df1282b56', 'PENDENTE', 'Lucas Barbosa', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '7fa70df2-fd63-4c5f-bd92-b436d5f6ff3a');
--- Banco de Talentos 'PENDENTE',
+INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('111e2222-e33b-14d3-a555-426666770000', 'PENDENTE', 'Isabella Cardoso', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '7fa70df2-fd63-4c5f-bd92-b436d5f6ff3a');
+
+-- Banco de Talentos
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('2e857b07-7f68-4d3a-b2d5-07d34a9f0735', 'PENDENTE', 'Rafaela Costa', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '9232421b-eb41-4769-bac8-09980f59d34d');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('fe1243b3-9b1b-46b1-b135-e11bf990a62b', 'PENDENTE', 'Mateus Fernandes', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '9232421b-eb41-4769-bac8-09980f59d34d');
 INSERT INTO CANDIDATO (ID, STATUS, NOME, FOTO, ID_SELECTIVE_PROCESS) VALUES ('085f3732-9c18-4195-a870-429c27b8e45a', 'PENDENTE', 'Juliana Santos', 'https://gr3web.com.br/wp-content/uploads/2022/07/Fotos-para-homem-perfil-de-WhatsApp-04.jpg', '9232421b-eb41-4769-bac8-09980f59d34d');

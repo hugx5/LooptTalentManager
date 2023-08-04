@@ -18,13 +18,8 @@ import java.util.UUID;
 public class SelectiveProcess {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO) //Gera o id automaticamente
     private UUID id; //Recomendado para arquitetura de microservicos para evitar duplicidades
     private String nome;
-
-
-    @OneToMany(mappedBy = "selectiveProcess", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Candidato> candidatos;
-
 
 }

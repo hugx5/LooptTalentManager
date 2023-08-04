@@ -9,13 +9,13 @@ import io.github.hugx5.utils.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 @Service
 public class ProcessoSeletiveServiceImpl implements ProcessoSeletiveService {
+
 
     private final SelectiveProcessRepository selectiveProcessRepository;
     private final CandidatoRepository candidatoRepository;
@@ -47,24 +47,40 @@ public class ProcessoSeletiveServiceImpl implements ProcessoSeletiveService {
         selectiveProcessRepository.deleteById(id);
     }
 
+
     @Override
-    public List<Candidato> buscarCandidatosPorIdDoProcesso(UUID id) {
-        Optional<SelectiveProcess> selectiveProcessOptional = selectiveProcessRepository.findById(id);
-        if (selectiveProcessOptional.isPresent()) {
-            SelectiveProcess selectiveProcess = selectiveProcessOptional.get();
-            return selectiveProcess.getCandidatos();
+    public void criarCandidato(UUID id, Candidato candidato) { //Cria um candidato
+        Optional<SelectiveProcess> selectiveProcessOptional = selectiveProcessRepository.findById(id); //Busca o processo seletivo pelo id
+        if (selectiveProcessOptional.isPresent()) { //Se o processo seletivo existir
+            SelectiveProcess selectiveProcess = selectiveProcessOptional.get(); //Busca o processo seletivo pelo id
+            candidato.setStatus(Status.PENDENTE); //Seta o status do candidato como pendente
+            candidato.setSelectiveProcess(selectiveProcess); //Seta o processo seletivo para o candidato
+            candidatoRepository.save(candidato); //Salva o candidato
         }
-        return null;
     }
+
     @Override
-    public void criarCandidato(UUID id, Candidato candidato) {
+    public List<Candidato> buscarCandidatosPorProcessoSeletivo(UUID id, Integer quantidade) {
         Optional<SelectiveProcess> selectiveProcessOptional = selectiveProcessRepository.findById(id);
-        if (selectiveProcessOptional.isPresent()) {
-            SelectiveProcess selectiveProcess = selectiveProcessOptional.get();
-            candidato.setStatus(Status.PENDENTE);
-            candidato.setSelectiveProcess(selectiveProcess);
+        if (selectiveProcessOptional.isPresent()) { //Se o processo seletivo existir
+            List<Candidato> candidatos = candidatoRepository.findByStatusNotAndSelectiveProcessId(Status.APROVADO,id); //Busca os candidatos pelo id do processo seletivo
+            Collections.shuffle(candidatos); //Embaralha a lista de candidatos
+            return candidatos.stream().limit(quantidade).collect(Collectors.toList()); //Retorna os 5 primeiros candidatos da lista
+        }
+        return Collections.emptyList(); //Retorna uma lista vazia
+    }
+
+    @Override
+    public void atualizarStatusCandidato(UUID id, Status status) {
+        Optional<Candidato> candidatoOptional = candidatoRepository.findById(id);
+        if (candidatoOptional.isPresent()) {
+            Candidato candidato = candidatoOptional.get();
+            candidato.setStatus(status);
             candidatoRepository.save(candidato);
         }
     }
+
 }
+
+
 
